@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #425f57;
+}
+
+.body {
+  color: #222;
+}
+
+.nickname {
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nickname__header {
+  background-color: var(--primary-color);
+  padding: 2rem 3rem;
+}
+
+.nickname__main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nickname__text {
+  background-color: rgb(234, 234, 234);
+  border-radius: 0.25rem;
+  color: #222;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+}
+
+.nickname__button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 250ms ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.nickname__button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--primary-color);
+}
