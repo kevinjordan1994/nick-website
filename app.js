@@ -1,5 +1,6 @@
 import getRandomNickName from "./nicknames.js";
 import ImageCarousel from "./ImageCarousel.js";
+import { generateMadLibOne } from "./MadLib.js";
 
 //NICKNAME
 const generateNickNameButton = document.querySelector(".nickname__button");
@@ -30,3 +31,14 @@ function activateCarousel() {
 }
 
 activateCarousel();
+
+// MADLIBS
+const submitButton = document.querySelector(".madlibs__submit-button");
+const madlibInputs = document.querySelectorAll(".madlibs__input");
+
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const madlibAnswers = [];
+  madlibInputs.forEach((input) => madlibAnswers.push(input.value));
+  console.log(generateMadLibOne(madlibAnswers));
+});
