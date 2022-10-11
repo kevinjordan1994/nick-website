@@ -20,6 +20,10 @@
   perspective: 10px;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 /* HEADER ===============================================*/
 
 .header__main {
@@ -118,3 +122,34 @@
 }
 
 /* FAV PICS ==================================================*/
+
+.fav-pics {
+  margin: 10% auto;
+  width: fit-content;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.fav-pics__title {
+  padding-bottom: 1rem;
+}
+
+.fav-pics__carousel {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+}
+
+.fav-pics__img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: opacity 250ms ease-in-out;
+}
