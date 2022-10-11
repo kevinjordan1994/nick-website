@@ -18,7 +18,12 @@ const first = [
   "Little",
   "The Itchy",
   "John Fecal",
+  "John Henry",
   "Fecal",
+  "Big",
+  "Incest",
+  "The Professional",
+  "Sigma",
 ];
 
 const last = [
@@ -34,6 +39,12 @@ const last = [
   "Fucker",
   "Sigma",
   "Smegma Enjoyer",
+  "Two-Balls",
+  "Dingus",
+  "Gamer",
+  "McGee",
+  "Try Hard",
+  "Pickle Penis",
 ];
 
 export default function getRandomNickName() {
