@@ -38,6 +38,7 @@ const madlibInputs = document.querySelectorAll(".madlibs__input");
 const form = document.querySelector(".form");
 const result = document.querySelector(".result");
 const madlibsText = document.querySelector(".madlibs__text");
+const resetButton = document.querySelector(".madlibs__reset-button");
 
 const toggleForm = () => {
   const elementsThatNeedToBeToggled = [form, result];
@@ -52,6 +53,10 @@ const convertInputElementsToArray = () => {
   return array;
 };
 
+const clearFormInputs = () => {
+  madlibInputs.forEach((input) => (input.value = ""));
+};
+
 form.addEventListener("change", () => {
   const inputsArray = convertInputElementsToArray();
   submitButton.disabled = inputsArray.some((input) => input.trim() === "");
@@ -61,5 +66,11 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   const madlibAnswers = convertInputElementsToArray();
   madlibsText.innerHTML = generateMadLibOne(madlibAnswers);
+  toggleForm();
+});
+
+resetButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  clearFormInputs();
   toggleForm();
 });
