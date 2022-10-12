@@ -35,10 +35,31 @@ activateCarousel();
 // MADLIBS
 const submitButton = document.querySelector(".madlibs__submit-button");
 const madlibInputs = document.querySelectorAll(".madlibs__input");
+const form = document.querySelector(".form");
+const result = document.querySelector(".result");
+const madlibsText = document.querySelector(".madlibs__text");
+
+const toggleForm = () => {
+  const elementsThatNeedToBeToggled = [form, result];
+  elementsThatNeedToBeToggled.forEach((element) =>
+    element.classList.toggle("off")
+  );
+};
+
+const convertInputElementsToArray = () => {
+  const array = [];
+  madlibInputs.forEach((input) => array.push(input.value));
+  return array;
+};
+
+form.addEventListener("change", () => {
+  const inputsArray = convertInputElementsToArray();
+  submitButton.disabled = inputsArray.some((input) => input.trim() === "");
+});
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  const madlibAnswers = [];
-  madlibInputs.forEach((input) => madlibAnswers.push(input.value));
-  console.log(generateMadLibOne(madlibAnswers));
+  const madlibAnswers = convertInputElementsToArray();
+  madlibsText.innerHTML = generateMadLibOne(madlibAnswers);
+  toggleForm();
 });
