@@ -13,6 +13,17 @@ section {
   min-width: var(--section-width);
 }
 
+footer {
+  font-size: 2rem;
+  font-weight: bold;
+  width: fit-content;
+  margin: 0 auto min(10rem, 15%);
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
 .wrapper {
   color: #222;
   background: linear-gradient(var(--primary-color), white);
@@ -133,18 +144,21 @@ section {
 /* FAV PICS ==================================================*/
 
 .fav-pics {
-  margin: 10% auto;
+  margin: max(6rem, 10%) auto 0;
   width: fit-content;
   position: relative;
   text-align: center;
   background-color: #fff;
   padding: 2rem;
-  border-radius: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
+  background-color: var(--primary-color);
 }
 
 .fav-pics__title {
   padding-bottom: 1rem;
+  color: #fff;
+  font-size: 2rem;
 }
 
 .fav-pics__carousel {
@@ -168,9 +182,9 @@ section {
 
 .madlibs {
   background-color: #fff;
-  width: fit-content;
-  max-width: 50%;
-  margin: 0 auto 10%;
+  width: 100%;
+  max-width: 40rem;
+  margin: max(6rem, 10%) auto 10%;
   text-align: center;
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -188,6 +202,10 @@ section {
   gap: 1rem;
   padding: 2rem 25%;
   text-align: left;
+}
+
+.madlibs__input {
+  font-size: 1rem;
 }
 
 .madlibs__text {
